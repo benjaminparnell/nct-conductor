@@ -1,0 +1,29 @@
+{
+  "name": "nct-conductor",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard",
+    "preversion": "npm test",
+    "postversion": "npm run zip",
+    "zip": "zip -r nct-conductor-$(node -e \"console.log(require('./package.json').version)\").zip ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/benjaminparnell/nct-conductor.git"
+  },
+  "author": "Ben Parnell <benjaminparnell.94@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benjaminparnell/nct-conductor/issues"
+  },
+  "homepage": "https://github.com/benjaminparnell/nct-conductor#readme",
+  "dependencies": {
+    "alexa-sdk": "^1.0.6",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "standard": "^8.6.0"
+  }
+}
